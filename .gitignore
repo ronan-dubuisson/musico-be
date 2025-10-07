@@ -1,0 +1,7 @@
+.env
+.eslinter.js
+.prettierrc
+
+node_modules/
+package-lock.json
+package.json
