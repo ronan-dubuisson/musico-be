@@ -1,30 +1,26 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
+name: Endpoints
+about: Template for endpoint creation
 title: ''
-labels: ''
+labels: 'api, enhancement'
 assignees: ''
 
 ---
+# Description
 
-# Schema:
-```
-{
-???
-}
-```
+# Model
 
 # Validation rules: 
 
-# endpoints
-## endpoint
-- description
+# Endpoint
 
 # TODO's
 ## development
-- [ ] task 1
-- [ ] task 2
+- [ ] Create endpoint as described above
 
 ## Testing
 - [ ] write unit tests (jest) - 80% coverage required
 - [ ] Api tests (postman)
+
+## Documentation
+- [ ] Api documentation (tool tbd) 
