@@ -5,7 +5,7 @@ import {
   getArtistById,
   getArtists,
   updateArtist,
-} from './artists.controller';
+} from '@controllers/artistsController';
 
 const router = Router();
 

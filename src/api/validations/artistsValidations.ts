@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { validator } from '../../services/services.validator';
+import { validator } from '@helpers/validator';
 
 const createSchema = Joi.object({
   name: Joi.string().min(3).required(),

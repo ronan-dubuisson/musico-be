@@ -1,7 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
-import { artists, Artist } from './artists.model';
-import { validateCreateArtist, validateUpdateArtist } from './artists.schema';
-import { pool } from '../../services/services.database';
+import { artists, Artist } from '@models/artistsModel';
+import {
+  validateCreateArtist,
+  validateUpdateArtist,
+} from '@validations/artistsValidations';
+import { dbPool } from '@helpers/database';
 
 // Create an item
 export const createArtist = (
@@ -26,7 +29,7 @@ export const getArtists = async (
   next: NextFunction,
 ) => {
   try {
-    const [artists] = await pool.query('SELECT * FROM artists');
+    const [artists] = await dbPool.query('SELECT * FROM artists');
     res.type('json');
     res.status(200).send(artists);
   } catch (error) {

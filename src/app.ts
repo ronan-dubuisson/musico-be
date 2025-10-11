@@ -1,6 +1,6 @@
 import express from 'express';
-import artistRoutes from './components/artists/artists.routes';
-import { errorHandler } from './middlewares/errorHandler';
+import artistRoutes from '@routes/artitstsRoute';
+import { errorHandler } from '@middlewares/errorHandler';
 import bodyParser from 'body-parser';
 
 export default function app() {

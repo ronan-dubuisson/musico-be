@@ -1,9 +1,9 @@
-import makeApp from '../../src/app';
+import makeApp from '@src/app';
 import request from 'supertest';
 
-describe('GET /users', () => {
-  const app = makeApp();
+const app = makeApp();
 
+describe('GET /users', () => {
   it('should return an empty array when no items exist', async () => {
     const response = await request(app).get('/api/artists').send();
     expect(response.body).toEqual([]);
