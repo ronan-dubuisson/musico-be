@@ -1,15 +1,18 @@
 import express from 'express';
-import itemRoutes from './routes/artistRoutes';
+import artistRoutes from './components/artists/artists.routes';
 import { errorHandler } from './middlewares/errorHandler';
+import bodyParser from 'body-parser';
 
-const app = express();
+export default function app() {
+  const app = express();
 
-app.use(express.json());
+  app.use(bodyParser.json());
 
-// Routes
-app.use('/api/artists', itemRoutes);
+  // Routes
+  app.use('/api/artists', artistRoutes);
 
-// Global error handler (should be after routes)
-app.use(errorHandler);
+  // Global error handler (should be after routes)
+  app.use(errorHandler);
 
-export default app;
+  return app;
+}

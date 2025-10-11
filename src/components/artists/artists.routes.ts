@@ -1,11 +1,11 @@
 import { Router } from 'express';
 import {
   createArtist,
-  getArtists,
-  getArtistById,
-  updateArtist,
   deleteArtist,
-} from '../controllers/artistController';
+  getArtistById,
+  getArtists,
+  updateArtist,
+} from './artists.controller';
 
 const router = Router();
 

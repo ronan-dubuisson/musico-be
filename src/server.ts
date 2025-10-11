@@ -1,6 +1,10 @@
-import app from './app';
-import config from './config/config';
+import Server from './config/config.server';
+import makeApp from './app';
+import dotenv from 'dotenv';
 
-app.listen(config.port, () => {
-  console.log(`Server running on port ${config.port}...`);
+dotenv.config();
+
+const app = makeApp();
+app.listen(Server.port, () => {
+  console.log(`Server running on port ${Server.port}...`);
 });
