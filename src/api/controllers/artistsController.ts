@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { artists, Artist } from '@models/artistsModel';
+import { artists } from '@models/artistsModel';
 import {
   validateCreateArtist,
   validateUpdateArtist,
